@@ -34,7 +34,7 @@ class Program
         Console.WriteLine("2. Cancel a flight");
         Console.WriteLine("3. View flight details");
         Console.WriteLine("4. Exit");
-        Console.WriteLine("=======================================");
+        Console.WriteLine("============================== ========="); d
         Console.Write("Please enter your choice: ");
         string? input = Console.ReadLine();
         if (int.TryParse(input, out int choice)) //so i can convert string into an integer 
