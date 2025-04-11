@@ -5,12 +5,13 @@ class Program
     static void Main()
     {
         string wink = " ;D "; // Added wink variable 
-        int choice; 
+        int choice;
 
 
         DisplayWelcomeMessage(); // Call this first to show the welcome message
         choice = ShowMainMenu(); // to capture the return value of ShowMainMenu
         HandleMenuChoice(choice, wink); // Pass the choice to HandleMenuChoice
+        ShowFlightDetails(); // Call this method to show flight details
     }
     static void p(string message) // Added print method istead of console.writeline 
     {
@@ -79,6 +80,85 @@ class Program
         }
 
         Console.ReadKey(); // Pause before closing or looping
+    }
+
+    static void ShowFlightDetails()
+    {
+        p("Flight details are as follows:");
+        p("Flight Number: 1234");
+        p("Destination: New York");
+        p("Departure Time: 10:00 AM");
+        p("Arrival Time: 1:00 PM");
+        p("=======================================");
+        Console.ReadKey(); // Pause before closing
+    }
+    static void BookFlight()
+    {
+        p("Booking a flight...");
+        // Add booking logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void CancelFlight()
+    {
+        p("Cancelling a flight...");
+        // Add cancellation logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ExitProgram()
+    {
+        p("Exiting the program...");
+        // Add exit logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ViewFlightDetails()
+    {
+        p("Viewing flight details...");
+        // Add logic to view flight details here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ShowFlightDetails(string flightNumber)
+    {
+        p($"Flight details for {flightNumber}:");
+        p("Flight Number: 1234");
+        p("Destination: New York");
+        p("Departure Time: 10:00 AM");
+        p("Arrival Time: 1:00 PM");
+        p("=======================================");
+        Console.ReadKey(); // Pause before closing
+    }
+    static void BookFlight(string flightNumber)
+    {
+        p($"Booking flight {flightNumber}...");
+        // Add booking logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void CancelFlight(string flightNumber)
+    {
+        p($"Cancelling flight {flightNumber}...");
+        // Add cancellation logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ExitProgram(string flightNumber)
+    {
+        p($"Exiting the program for flight {flightNumber}...");
+        // Add exit logic here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ViewFlightDetails(string flightNumber)
+    {
+        p($"Viewing flight details for {flightNumber}...");
+        // Add logic to view flight details here
+        Console.ReadKey(); // Pause before closing
+    }
+    static void ShowFlightDetails(string flightNumber, string destination)
+    {
+        p($"Flight details for {flightNumber} to {destination}:");
+        p("Flight Number: 1234");
+        p("Destination: New York");
+        p("Departure Time: 10:00 AM");
+        p("Arrival Time: 1:00 PM");
+        p("=======================================");
+        Console.ReadKey(); // Pause before closing
     }
 }
 
