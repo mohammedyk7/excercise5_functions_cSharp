@@ -12,6 +12,7 @@ class Program
         choice = ShowMainMenu(); // to capture the return value of ShowMainMenu
         HandleMenuChoice(choice, wink); // Pass the choice to HandleMenuChoice
         ShowFlightDetails(); // Call this method to show flight details
+        BookFlight(); // Call this method to book a flight
     }
     static void p(string message) // Added print method istead of console.writeline 
     {
