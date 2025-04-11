@@ -15,6 +15,7 @@ class Program
         BookFlight(); // Call this method to book a flight
         CancelFlight(); // Call this method to cancel a flight
         ExitProgram(); // Call this method to exit the program
+        ViewFlightDetails(); // Call this method to view flight details
     }
     static void p(string message) // Added print method istead of console.writeline 
     {
