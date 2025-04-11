@@ -1,18 +1,17 @@
-﻿using System;
+using System;
 
 class Program
 {
     static void Main()
     {
         string wink = " ;D "; // Added wink variable 
-        int choice; 
-
+        int choice = 0; // Initialize choice variable
 
         DisplayWelcomeMessage(); // Call this first to show the welcome message
         choice = ShowMainMenu(); // to capture the return value of ShowMainMenu
         HandleMenuChoice(choice, wink); // Pass the choice to HandleMenuChoice
     }
-    static void p(string message) // Added print method istead of console.writeline 
+    static void p(string message) // Added print method
     {
         Console.WriteLine(message);
     }
@@ -81,4 +80,3 @@ class Program
         Console.ReadKey(); // Pause before closing or looping
     }
 }
-
