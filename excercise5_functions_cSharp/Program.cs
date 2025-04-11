@@ -6,7 +6,7 @@ class Program
     {
         DisplayWelcomeMessage();
         int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
-        HandleMenuChoice(choice);    // Pass the choice to HandleMenuChoice
+        HandleMenuChoice(choice);    // Pass the choice to HandleMenuChoice added parameter here 
     }
 
     static void DisplayWelcomeMessage() // No parameters  
