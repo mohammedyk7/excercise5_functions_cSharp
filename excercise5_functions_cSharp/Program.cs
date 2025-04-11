@@ -6,7 +6,10 @@ class Program
     {
         DisplayWelcomeMessage();
         int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
-        HandleMenuChoice(choice);    // Pass the choice to HandleMenuChoice added parameter here 
+        HandleMenuChoice(choice); 
+        // Pass the choice to HandleMenuChoice added parameter here because when i call menu choice it will have asccess to read it 
+        string input = Console.ReadLine(); // Allow null input
+
     }
 
     static void DisplayWelcomeMessage() // No parameters  
@@ -34,21 +37,22 @@ class Program
         Console.WriteLine("2. Cancel a flight");
         Console.WriteLine("3. View flight details");
         Console.WriteLine("4. Exit");
-        Console.WriteLine("============================== ========="); d
+        Console.WriteLine("=======================================");
+
         Console.Write("Please enter your choice: ");
-        string? input = Console.ReadLine();
-        if (int.TryParse(input, out int choice)) //so i can convert string into an integer 
+        string? input = Console.ReadLine(); // Allow null input  + i added it here because i cant add it as a parameter in the method above
+        if (int.TryParse(input, out int choice)) // Safely parse input  
         {
-            return choice;
+            return choice; //return integer
         }
         else
         {
             Console.WriteLine("Invalid input. Please enter a number between 1 and 4.");
-            return ShowMainMenu(); // Recursively prompt again
+            return ShowMainMenu(); // Recursively prompt again  
         }
     }
 
-    static void HandleMenuChoice(int choice)
+    static void HandleMenuChoice(int choice) //parameter added with no return 
     {
         switch (choice)
         {
