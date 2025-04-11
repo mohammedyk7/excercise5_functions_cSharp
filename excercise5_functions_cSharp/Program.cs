@@ -2,21 +2,22 @@
 
 class Program
 {
-    static void Main() //so i can call the methods i created in the main method
+    static void Main()
     {
-        DisplayWelcomeMessage();
-        int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
-        HandleMenuChoice(choice); 
-        // Pass the choice to HandleMenuChoice added parameter here because when i call menu choice it will have asccess to read it 
-        string input = Console.ReadLine(); // Allow null input
+        string wink = " ;D "; // Added wink variable
 
+        DisplayWelcomeMessage(wink); // Call this first to show the welcome message
+        int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
+        HandleMenuChoice(choice);    // Pass the choice to HandleMenuChoice
     }
 
-    static void DisplayWelcomeMessage() // No parameters  
+    static void DisplayWelcomeMessage( string wink)
+        // No parameters
+       
     {
         Console.Clear();
         Console.WriteLine("                                                ");
-        Console.WriteLine("          C O D L I N E A I R W A Y S                                   ");
+        Console.WriteLine("          C O D L I N E A I R W A Y S" + wink);
         Console.WriteLine("=======================================");
         Console.WriteLine("          WELCOME TO SKYWAYS AIRLINES         ");
         Console.WriteLine("=======================================");
