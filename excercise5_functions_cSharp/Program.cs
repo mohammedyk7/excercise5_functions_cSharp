@@ -8,16 +8,16 @@ class Program
 
         DisplayWelcomeMessage(wink); // Call this first to show the welcome message
         int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
-        HandleMenuChoice(choice);    // Pass the choice to HandleMenuChoice
+        HandleMenuChoice(choice , wink);    // Pass the choice to HandleMenuChoice
     }
 
-    static void DisplayWelcomeMessage( string wink)
-        // No parameters
+    static void DisplayWelcomeMessage( string wink )
+        // 
        
     {
         Console.Clear();
         Console.WriteLine("                                                ");
-        Console.WriteLine("          C O D L I N E A I R W A Y S" + wink);
+        Console.WriteLine("          C O D L I N E A I R W A Y S                   " );
         Console.WriteLine("=======================================");
         Console.WriteLine("          WELCOME TO SKYWAYS AIRLINES         ");
         Console.WriteLine("=======================================");
@@ -53,12 +53,12 @@ class Program
         }
     }
 
-    static void HandleMenuChoice(int choice) //parameter added with no return 
+    static void HandleMenuChoice(int choice, string wink ) //parameter added with no return  i addded the wink 
     {
         switch (choice)
         {
             case 1:
-                Console.WriteLine("You chose to book a flight.");
+                Console.WriteLine("You chose to book a flight." + wink);
                 break;
             case 2:
                 Console.WriteLine("You chose to cancel a flight.");
