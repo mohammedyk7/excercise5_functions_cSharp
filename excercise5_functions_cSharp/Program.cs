@@ -53,7 +53,7 @@ class Program
         }
     }
 
-    static void HandleMenuChoice(int choice, string wink ) //parameter added with no return  i addded the wink 
+    static void HandleMenuChoice(int choice, string wink ) //parameter added with no return  i addded the wink for the sAKe of practice 
     {
         switch (choice)
         {
