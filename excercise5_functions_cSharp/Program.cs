@@ -11,33 +11,37 @@ class Program
         choice = ShowMainMenu(); // to capture the return value of ShowMainMenu
         HandleMenuChoice(choice, wink); // Pass the choice to HandleMenuChoice
     }
+    static void p(string message) // Added print method istead of console.writeline 
+    {
+        Console.WriteLine(message);
+    }
 
     static void DisplayWelcomeMessage()
     {
         Console.Clear();
-        Console.WriteLine("                                                ");
-        Console.WriteLine("          C O D L I N E A I R W A Y S                   ");
-        Console.WriteLine("=======================================");
-        Console.WriteLine("          WELCOME TO SKYWAYS AIRLINES         ");
-        Console.WriteLine("=======================================");
-        Console.WriteLine("          Relax and stay calm ");
-        Console.WriteLine("          Enjoy your flight.");
-        Console.WriteLine("=======================================");
-        Console.WriteLine("Press any key to continue...");
+        p("                                                ");
+        p("          C O D L I N E A I R W A Y S                   ");
+        p("=======================================");
+        p("          WELCOME TO SKYWAYS AIRLINES         ");
+        p("=======================================");
+        p("          Relax and stay calm ");
+        p("          Enjoy your flight.");
+        p("=======================================");
+        p("Press any key to continue...");
         Console.ReadKey(); // Corrected method name from Readkey to ReadKey  
     }
 
     static int ShowMainMenu()
     {
         Console.Clear();
-        Console.WriteLine("=======================================");
-        Console.WriteLine("          MAIN MENU         ");
-        Console.WriteLine("=======================================");
-        Console.WriteLine("1. Book a flight");
-        Console.WriteLine("2. Cancel a flight");
-        Console.WriteLine("3. View flight details");
-        Console.WriteLine("4. Exit");
-        Console.WriteLine("=======================================");
+        p("=======================================");
+        p("          MAIN MENU         ");
+        p("=======================================");
+        p("1. Book a flight");
+        p("2. Cancel a flight");
+        p("3. View flight details");
+        p("4. Exit");
+        p("=======================================");
 
         Console.Write("Please enter your choice: ");
         string? input = Console.ReadLine(); // Allow null input
@@ -47,7 +51,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Invalid input. Please enter a number between 1 and 4.");
+            p("Invalid input. Please enter a number between 1 and 4.");
             return ShowMainMenu(); // Recursively prompt again  
         }
     }
@@ -57,19 +61,19 @@ class Program
         switch (choice)
         {
             case 1:
-                Console.WriteLine("You chose to book a flight." + wink);
+                p("You chose to book a flight." + wink);
                 break;
             case 2:
-                Console.WriteLine("You chose to cancel a flight.");
+                p("You chose to cancel a flight.");
                 break;
             case 3:
-                Console.WriteLine("Viewing flight details...");
+                p("Viewing flight details...");
                 break;
             case 4:
-                Console.WriteLine("Exiting the program. Thank you!");
+                p("Exiting the program. Thank you!");
                 break;
             default:
-                Console.WriteLine("Invalid choice. Please try again.");
+                p("Invalid choice. Please try again.");
                 break;
         }
 
