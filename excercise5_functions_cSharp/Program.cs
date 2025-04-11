@@ -2,7 +2,7 @@
 
 class Program
 {
-    static void Main()
+    static void Main() //so i can call the methods i created in the main method
     {
         DisplayWelcomeMessage();
         int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
