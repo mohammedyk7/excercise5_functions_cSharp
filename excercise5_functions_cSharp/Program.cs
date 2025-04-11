@@ -4,20 +4,19 @@ class Program
 {
     static void Main()
     {
-        string wink = " ;D "; // Added wink variable
+        string wink = " ;D "; // Added wink variable 
+        int choice = 0; // Initialize choice variable
 
-        DisplayWelcomeMessage(wink); // Call this first to show the welcome message
-        int choice = ShowMainMenu(); // Capture the return value of ShowMainMenu
-        HandleMenuChoice(choice , wink);    // Pass the choice to HandleMenuChoice
+        DisplayWelcomeMessage(); // Call this first to show the welcome message
+        choice = ShowMainMenu(); // to capture the return value of ShowMainMenu
+        HandleMenuChoice(choice, wink); // Pass the choice to HandleMenuChoice
     }
 
-    static void DisplayWelcomeMessage( string wink )
-        // 
-       
+    static void DisplayWelcomeMessage()
     {
         Console.Clear();
         Console.WriteLine("                                                ");
-        Console.WriteLine("          C O D L I N E A I R W A Y S                   " );
+        Console.WriteLine("          C O D L I N E A I R W A Y S                   ");
         Console.WriteLine("=======================================");
         Console.WriteLine("          WELCOME TO SKYWAYS AIRLINES         ");
         Console.WriteLine("=======================================");
@@ -41,10 +40,10 @@ class Program
         Console.WriteLine("=======================================");
 
         Console.Write("Please enter your choice: ");
-        string? input = Console.ReadLine(); // Allow null input  + i added it here because i cant add it as a parameter in the method above
+        string? input = Console.ReadLine(); // Allow null input
         if (int.TryParse(input, out int choice)) // Safely parse input  
         {
-            return choice; //return integer
+            return choice; // Return integer
         }
         else
         {
@@ -53,7 +52,7 @@ class Program
         }
     }
 
-    static void HandleMenuChoice(int choice, string wink ) //parameter added with no return  i addded the wink for the sAKe of practice 
+    static void HandleMenuChoice(int choice, string wink) // Parameter added with no return
     {
         switch (choice)
         {
